@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Card from "../components/Card";
 import { useNavigate } from "react-router-dom";
 
-const Home = ({ productCards, cart, addToCart, removeFromCart, userIn }) => {
+const Home = ({ productCards, cart, addToCart, removeFromCart }) => {
   const navigation = useNavigate();
 
   useEffect(() => {
-    if (!userIn) {
+    const user = localStorage.getItem("userIn");
+    if (!user) {
       navigation("/login");
     }
-  });
+  }, []);
 
   return (
     <div className="pt-24 pb-10 flex flex-wrap justify-center gap-8 bg-[#EDF2F7]">

@@ -1,12 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ setUserIn }) => {
+const Navbar = () => {
   const navigation = useNavigate();
 
   const handleLogOut = () => {
-    localStorage.setItem("userIn", false);
-    setUserIn(false);
+    localStorage.removeItem("userIn");
     navigation("/login");
   };
 

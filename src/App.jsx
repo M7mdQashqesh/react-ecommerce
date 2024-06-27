@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
@@ -6,25 +6,8 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 
 function App() {
-  // ========== {Start User Logic} ==========
-  const navigation = useNavigate();
-
-  const [userIn, setUserIn] = useState(localStorage.getItem("userIn") || false);
-
-  useEffect(() => {
-    localStorage.setItem("userIn", userIn);
-  }, []);
-
-  useEffect(() => {
-    const user = localStorage.getItem("userIn");
-    if (!user) {
-      navigation("/login");
-    }
-  }, []);
-  // ========== {End User Logic} ==========
 
   // ========== {Start Cart Logic} ==========
-
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
   );
@@ -44,11 +27,9 @@ function App() {
     const newCart = cart.filter((item) => item.name !== removedProduct.name);
     setCart(newCart);
   };
-
   // ========== {End Cart Logic} ==========
 
   // ========== {Start array of object} ==========
-
   const productCards = [
     {
       name: "Wireless Headphones",
@@ -89,14 +70,13 @@ function App() {
         "https://media.istockphoto.com/id/184841045/photo/memory-stick.webp?b=1&s=170667a&w=0&k=20&c=2Nau1PzmF6ss9shD0GVte30zUTsmREXTnQ1vdCKRuww=",
     },
   ];
-
   // ========== {End array of object} ==========
 
   return (
     <div>
-      {userIn && <Navbar setUserIn={setUserIn} />}
+      <Navbar />
       <Routes>
-        <Route path="/login" element={<Login setUserIn={setUserIn} />} />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/"
           element={
@@ -105,7 +85,6 @@ function App() {
               addToCart={addToCart}
               cart={cart}
               removeFromCart={removeFromCart}
-              userIn={userIn}
             />
           }
         />

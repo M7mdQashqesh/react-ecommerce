@@ -11,7 +11,7 @@ const Card = ({ productCards, cart, addToCart, removeFromCart }) => {
   }, [cart]);
 
   return (
-    <div className="w-80 gap-5 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:scale-[1.05] duration-200">
+    <div className="w-80 gap-5 max-h-96 bg-white border border-gray-200 rounded-lg shadow-md  dark:bg-gray-800 dark:border-gray-700 hover:scale-[1.05] duration-200">
       <img
         className="max-h-40 w-full rounded-t-lg"
         src={productCards.imageUrl}

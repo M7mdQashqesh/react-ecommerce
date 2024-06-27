@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ setUserIn }) => {
+const Login = () => {
   const navigation = useNavigate();
+
   const handleSignIn = () => {
-    setUserIn(true);
     localStorage.setItem("userIn", true);
     navigation("/");
   };

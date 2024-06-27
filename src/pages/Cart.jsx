@@ -13,7 +13,7 @@ const Cart = ({ removeFromCart, cart }) => {
   }, []);
 
   return (
-    <div className="pt-24 pb-10 flex flex-wrap justify-center gap-8 bg-[#EDF2F7] min-h-screen h-full">
+    <div className=" pt-24 pb-10 flex flex-wrap justify-center gap-8 bg-[#EDF2F7] min-h-screen h-full">
       {cart && cart.length >= 1 ? (
         cart.map((product) => {
           return (
