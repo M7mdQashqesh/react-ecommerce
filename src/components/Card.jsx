@@ -19,15 +19,16 @@ const Card = ({ productCards, cart, addToCart, removeFromCart }) => {
       />
 
       <div className="p-5">
-
-        <div  className="flex justify-between items-center">
+        <div className="flex justify-between items-center">
           <span className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
             {productCards.name}
           </span>
-          <span className="mb-2 text-lg font-bold tracking-tight text-blue-700 dark:text-white">${productCards.price}</span>
+          <span className="mb-2 text-lg font-bold tracking-tight text-blue-700 dark:text-white">
+            ${productCards.price}
+          </span>
         </div>
 
-        <p className= "mt-2 mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p className="mt-2 mb-3 font-normal text-gray-700 dark:text-gray-400">
           {productCards.description}
         </p>
         <div className=" flex justify-center items-center mt-6">

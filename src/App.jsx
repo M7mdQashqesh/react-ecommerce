@@ -111,12 +111,7 @@ function App() {
         />
         <Route
           path="/cart"
-          element={
-            <Cart
-              removeFromCart={removeFromCart}
-              cart={cart}
-            />
-          }
+          element={<Cart removeFromCart={removeFromCart} cart={cart} />}
         />
       </Routes>
     </div>
