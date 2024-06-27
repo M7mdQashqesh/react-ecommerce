@@ -43,7 +43,7 @@ function App() {
       price: 199.99,
       description:
         "Advanced smart watch with heart rate monitor, GPS, and customizable watch faces.",
-      imageUrl: "https://images.unsplash.com/photo-1517433456452-f9633a875f6f",
+      imageUrl: "https://istarmax.com/wp-content/uploads/2024/02/2024-FEB-PRODUCT-RANGE-1-1024x499.webp",
     },
     {
       name: "Bluetooth Speaker",
@@ -58,7 +58,7 @@ function App() {
       price: 29.99,
       description:
         "Ergonomic laptop stand with adjustable height and sturdy construction.",
-      imageUrl: "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9",
+      imageUrl: "https://en.woodcessories.com/cdn/shop/collections/Laptop_Kategorie_Banner_Desktop_1422x800_COMP.webp?v=1689841414",
     },
     {
       name: "USB-C Hub",
