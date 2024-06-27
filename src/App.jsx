@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 
 function App() {
-
   // ========== {Start Cart Logic} ==========
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
